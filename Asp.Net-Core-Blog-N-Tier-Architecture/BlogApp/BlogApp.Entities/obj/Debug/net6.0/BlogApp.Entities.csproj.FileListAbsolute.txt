@@ -1,0 +1,15 @@
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Entities\bin\Debug\net6.0\BlogApp.Entities.deps.json
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Entities\bin\Debug\net6.0\BlogApp.Entities.dll
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Entities\bin\Debug\net6.0\BlogApp.Entities.pdb
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Entities\obj\Debug\net6.0\BlogApp.Entities.csproj.AssemblyReference.cache
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Entities\obj\Debug\net6.0\BlogApp.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Entities\obj\Debug\net6.0\BlogApp.Entities.AssemblyInfoInputs.cache
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Entities\obj\Debug\net6.0\BlogApp.Entities.AssemblyInfo.cs
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Entities\obj\Debug\net6.0\BlogApp.Entities.csproj.CoreCompileInputs.cache
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Entities\obj\Debug\net6.0\BlogApp.Entities.dll
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Entities\obj\Debug\net6.0\refint\BlogApp.Entities.dll
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Entities\obj\Debug\net6.0\BlogApp.Entities.pdb
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Entities\obj\Debug\net6.0\ref\BlogApp.Entities.dll
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Entities\bin\Debug\net6.0\BlogApp.Shared.dll
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Entities\bin\Debug\net6.0\BlogApp.Shared.pdb
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Entities\obj\Debug\net6.0\BlogApp.Entities.csproj.CopyComplete

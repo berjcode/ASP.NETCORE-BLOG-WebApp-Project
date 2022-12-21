@@ -1,0 +1,12 @@
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Shared\bin\Debug\net6.0\BlogApp.Shared.deps.json
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Shared\bin\Debug\net6.0\BlogApp.Shared.dll
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Shared\bin\Debug\net6.0\BlogApp.Shared.pdb
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Shared\obj\Debug\net6.0\BlogApp.Shared.csproj.AssemblyReference.cache
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Shared\obj\Debug\net6.0\BlogApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Shared\obj\Debug\net6.0\BlogApp.Shared.AssemblyInfoInputs.cache
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Shared\obj\Debug\net6.0\BlogApp.Shared.AssemblyInfo.cs
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Shared\obj\Debug\net6.0\BlogApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Shared\obj\Debug\net6.0\BlogApp.Shared.dll
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Shared\obj\Debug\net6.0\refint\BlogApp.Shared.dll
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Shared\obj\Debug\net6.0\BlogApp.Shared.pdb
+C:\Users\abdbl\Documents\GitHub\Asp.Net-Core-Blog-N-Tier-Architecture\BlogApp\BlogApp.Shared\obj\Debug\net6.0\ref\BlogApp.Shared.dll
