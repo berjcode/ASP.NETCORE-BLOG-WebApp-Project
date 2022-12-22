@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BlogApp.Data.Concrete.EntityFramework.Repositories
 {
-    public class EfArticleRepository : EfEntityRepositoryBase<Role>, IArticleRepository
+    public class EfArticleRepository : EfEntityRepositoryBase<Article>, IArticleRepository
     {
 
         public EfArticleRepository(DbContext context) : base(context)

@@ -35,7 +35,7 @@ namespace BlogApp.Data.Concrete.EntityFramework.Mappings
 
             builder.Property(u => u.Picture).HasMaxLength(250);
 
-            builder.HasOne<Role>(u => u.Role).WithMany( r => r.Users).HasForeignKey( u => u.RoleId);
+            builder.HasOne<Role>(u => u.Role).WithMany( r => r.User).HasForeignKey( u => u.RoleId);
 
 
             builder.Property(u => u.CreatedByName).IsRequired();

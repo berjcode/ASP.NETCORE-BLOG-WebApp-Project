@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BlogApp.Data.Abstract
 {
-   public interface IArticleRepository : IEntityRepository<Role>
+   public interface IArticleRepository : IEntityRepository<Article>
     {
     }
 }

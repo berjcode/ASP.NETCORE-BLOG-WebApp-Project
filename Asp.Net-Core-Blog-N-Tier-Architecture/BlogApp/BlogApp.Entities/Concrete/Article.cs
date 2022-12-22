@@ -1,15 +1,14 @@
-﻿using BlogApp.Shared.Entities;
-using BlogApp.Shared.Entities.Abstract;
+﻿using BlogApp.Shared.Entities.Abstract;
+using BlogApp.Shared.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BlogApp.Entities.Concrete
 {
-    public   class Article :EntityBase,IEntity
+    public class Article: EntityBase, IEntity
     {
         public string Title { get; set; }
         public string Content { get; set; }
@@ -19,15 +18,15 @@ namespace BlogApp.Entities.Concrete
 
         public DateTime Date { get; set; }
 
-        public int CommentCount { get; set; }
-        public int ViewsCount { get; set; }
+        public int CommentCount { get; set; } = 0;
+        public int ViewsCount { get; set; } = 0;
 
-        public int ArticlesCount { get; set;}
+       
 
 
-        public string  SeoAuthor { get; set; }
+        public string SeoAuthor { get; set; }
 
-        public string SeoDescription { get; set;}
+        public string SeoDescription { get; set; }
 
         public string SeoTags { get; set; }
 
@@ -36,7 +35,7 @@ namespace BlogApp.Entities.Concrete
         public Category Category { get; set; }
 
 
-        public int  UserId { get; set; }
+        public int UserId { get; set; }
 
         public User User { get; set; }
 
