@@ -33,5 +33,5 @@
         }
         "order": [[4,"desc"]]
     });
-
+  /*  sayfa tam olarak yüklendiği anda jquery kodlarının yüklenmesini sağlar.*/
 });

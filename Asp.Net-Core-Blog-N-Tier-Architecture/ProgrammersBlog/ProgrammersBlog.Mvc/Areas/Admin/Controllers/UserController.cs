@@ -57,13 +57,16 @@ namespace ProgrammersBlog.Mvc.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await _userManager.FindByEmailAsync(userLoginDto.Email);
-                if (user!=null)
+                //useri getir.
+                var user = await _userManager.FindByEmailAsync(userLoginDto.Email); // email kontrolü için
+                if (user!=null)  //böyle bir kullanıcı var ise 
                 {
+                
                     var result = await _signInManager.PasswordSignInAsync(user, userLoginDto.Password,
-                        userLoginDto.RememberMe, false);
+                        userLoginDto.RememberMe, false); //false hesap kilitleme  işlemi false 
                     if (result.Succeeded)
                     {
+                        //giriş başarılı ise 
                         return RedirectToAction("Index", "Home");
                     }
                     else

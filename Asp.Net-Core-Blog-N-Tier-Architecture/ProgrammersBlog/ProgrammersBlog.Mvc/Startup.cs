@@ -21,28 +21,29 @@ namespace ProgrammersBlog.Mvc
         {
             services.AddControllersWithViews().AddRazorRuntimeCompilation().AddJsonOptions(opt =>
             {
-                opt.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-                opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+                opt.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); //json formatýnda gönderiyoruz.
+                opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve; //iç içe olan objelerde bir birine referans ederse bir sorun yaþamayacaktýr. Nested
             });
             services.AddSession();
             services.AddAutoMapper(typeof(CategoryProfile),typeof(ArticleProfile),typeof(UserProfile));
             services.LoadMyServices();
 			services.AddScoped<IImageHelper, ImageHelper>();
             
+            //Identity Cookie konfigürasyon ayarlarý
 			services.ConfigureApplicationCookie(options =>
             {
-                options.LoginPath = new PathString("/Admin/User/Login");
-                options.LogoutPath = new PathString("/Admin/User/Logout");
+                options.LoginPath = new PathString("/Admin/User/Login"); //Login sayfasý yolu
+                options.LogoutPath = new PathString("/Admin/User/Logout"); //Logout sayfasý yolu
                 options.Cookie = new CookieBuilder
                 {
-                    Name = "ProgrammersBlog",
-                    HttpOnly = true,
-                    SameSite = SameSiteMode.Strict,
-                    SecurePolicy = CookieSecurePolicy.SameAsRequest // Always
+                    Name = "ProgrammersBlog",  //Cookie Ýsmi
+                    HttpOnly = true, //frontend tarafýnda cookie bilgisine eriþim engellenir. XSS saldýrýlarý
+                    SameSite = SameSiteMode.Strict,  //CSRF Saldýrýsnýný önlemek içindir. oturum açmýþ kullanýcýnýn cookie bilgileri ile yapýlan iþlemlerdir. cookie calýnýr ve iþlem yapýlýr.
+                    SecurePolicy = CookieSecurePolicy.SameAsRequest  //Politika deðeri, cookie'nin güvenlik deðeri. request ne üzerinden gelirse dönüþ yapar. http, https
                 };
-                options.SlidingExpiration = true;
-                options.ExpireTimeSpan = System.TimeSpan.FromDays(7);
-                options.AccessDeniedPath = new PathString("/Admin/User/AccessDenied");
+                options.SlidingExpiration = true; //kullanýcý sisteme giriþ süresi tanýnmasý
+                options.ExpireTimeSpan = System.TimeSpan.FromDays(7);  //cookie yaþam süresi 7 gün.
+                options.AccessDeniedPath = new PathString("/Admin/User/AccessDenied"); //yetkisiz giriþ sayfasý yolu 
             });
         }
 
@@ -55,11 +56,11 @@ namespace ProgrammersBlog.Mvc
                 app.UseStatusCodePages();
             }
 
-            app.UseSession();
+            app.UseSession(); // oturum 
             app.UseStaticFiles();
             app.UseRouting();
-            app.UseAuthentication();
-            app.UseAuthorization();
+            app.UseAuthentication(); //kimlik doðrulama iþlemidir.
+            app.UseAuthorization(); //yetki kontrolünü yapýlmasý 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapAreaControllerRoute(

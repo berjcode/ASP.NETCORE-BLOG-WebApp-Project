@@ -39,17 +39,18 @@ namespace ProgrammersBlog.Mvc.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Add(CategoryAddDto categoryAddDto)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) //Modelin Durumu Doğru Mu? Her şey doğru ise  ;
             {
                 var result = await _categoryService.Add(categoryAddDto, "Admin");
-                if (result.ResultStatus==ResultStatus.Success)
+                if (result.ResultStatus==ResultStatus.Success) //burdaki işlem doğru ise cliente model döneriz. 
                 {
+                    //json formatına dönüştürme işlemi yapıyoruz. System.text
                     var categoryAddAjaxModel = JsonSerializer.Serialize(new CategoryAddAjaxViewModel
                     {
-                        CategoryDto = result.Data,
-                        CategoryAddPartial = await this.RenderViewToStringAsync("_CategoryAddPartial", categoryAddDto)
-                    });
-                    return Json(categoryAddAjaxModel);
+                        CategoryDto = result.Data, 
+                        CategoryAddPartial = await this.RenderViewToStringAsync("_CategoryAddPartial", categoryAddDto) //extension method
+                    }); //json formatında string şekilde gelir
+                    return Json(categoryAddAjaxModel); //js bizi anlayabilmesi için dönmemiz gerekir. Frontend tarafında gönderim yapıyoruz.
                 }
             }
             var categoryAddAjaxErrorModel = JsonSerializer.Serialize(new CategoryAddAjaxViewModel
@@ -98,8 +99,8 @@ namespace ProgrammersBlog.Mvc.Areas.Admin.Controllers
 
         public async Task<JsonResult> GetAllCategories()
         {
-            var result = await _categoryService.GetAllByNonDeleted();
-            var categories = JsonSerializer.Serialize(result.Data, new JsonSerializerOptions
+            var result = await _categoryService.GetAllByNonDeleted(); //Category yenile kısmında kullanıyoruz. Silinmişleri getirmez.
+            var categories = JsonSerializer.Serialize(result.Data, new JsonSerializerOptions  //birbirine referans edecek objeler olduğu için bu yapıyı kullandık
             {
                 ReferenceHandler = ReferenceHandler.Preserve
             });

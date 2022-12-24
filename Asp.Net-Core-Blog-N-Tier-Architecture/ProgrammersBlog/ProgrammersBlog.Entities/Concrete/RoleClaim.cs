@@ -9,5 +9,8 @@ namespace ProgrammersBlog.Entities.Concrete
 {
     public class RoleClaim:IdentityRoleClaim<int>
     {
+
+        // yaptığımız talepler neticesinde getiren anlamına gelir.
+        //Claimler; rollerin dışında kullanıcı hakkında bilgi tutmamızı ve bu bilgilere göre yetkilendirme yapmamızı sağlayan yapılardır.
     }
 }

@@ -21,15 +21,15 @@ namespace ProgrammersBlog.Services.Extensions
             serviceCollection.AddIdentity<User, Role>(options =>
             {
                 // User Password Options
-                options.Password.RequireDigit = false;
-                options.Password.RequiredLength = 5;
-                options.Password.RequiredUniqueChars = 0;
-                options.Password.RequireNonAlphanumeric = false;
-                options.Password.RequireLowercase = false;
-                options.Password.RequireUppercase = false;
+                options.Password.RequireDigit = false;  // şifrelerimizde rakam olmalı mı?
+                options.Password.RequiredLength = 5;   //Şifrenin karakter uzunluğu
+                options.Password.RequiredUniqueChars = 0; // uniq karakterlerden kac tane olmalı 
+                options.Password.RequireNonAlphanumeric = false; // @ !? gibi ifadelerin kullanılmasını sağlar.
+                options.Password.RequireLowercase = false; // kücük harf olmalı
+                options.Password.RequireUppercase = false; // büyük harf olmalı
                 // User Username and Email Options
-                options.User.AllowedUserNameCharacters= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+$";
-                options.User.RequireUniqueEmail = true;
+                options.User.AllowedUserNameCharacters= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+$"; //bu karakterler olabilir.
+                options.User.RequireUniqueEmail = true; //email uniq olmalı başka birinde olmamalı
             }).AddEntityFrameworkStores<ProgrammersBlogContext>();
             serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
             serviceCollection.AddScoped<ICategoryService, CategoryManager>();
