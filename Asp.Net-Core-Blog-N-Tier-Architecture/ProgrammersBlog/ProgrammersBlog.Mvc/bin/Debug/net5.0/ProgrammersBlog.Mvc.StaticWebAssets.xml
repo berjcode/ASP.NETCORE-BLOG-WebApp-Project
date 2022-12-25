@@ -1,1 +1,3 @@
-﻿<StaticWebAssets Version="1.0" />
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="_content/NToastNotify" Path="C:\Users\abdbl\.nuget\packages\ntoastnotify\7.0.0\build\..\staticwebassets\" />
+</StaticWebAssets>

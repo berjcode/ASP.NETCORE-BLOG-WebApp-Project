@@ -23,9 +23,9 @@ namespace ProgrammersBlog.Mvc
             {
                 opt.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); //json formatýnda gönderiyoruz.
                 opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve; //iç içe olan objelerde bir birine referans ederse bir sorun yaþamayacaktýr. Nested
-            });
+            }).AddNToastNotifyToastr(); //js library
             services.AddSession();
-            services.AddAutoMapper(typeof(CategoryProfile),typeof(ArticleProfile),typeof(UserProfile));
+            services.AddAutoMapper(typeof(CategoryProfile),typeof(ArticleProfile),typeof(UserProfile),typeof(ViewModelsProfile),typeof(CommentProfile));
             services.LoadMyServices();
 			services.AddScoped<IImageHelper, ImageHelper>();
             
@@ -61,6 +61,7 @@ namespace ProgrammersBlog.Mvc
             app.UseRouting();
             app.UseAuthentication(); //kimlik doðrulama iþlemidir.
             app.UseAuthorization(); //yetki kontrolünü yapýlmasý 
+            app.UseNToastNotify();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapAreaControllerRoute(

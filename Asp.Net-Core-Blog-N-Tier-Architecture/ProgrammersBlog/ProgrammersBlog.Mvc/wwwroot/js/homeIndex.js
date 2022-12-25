@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
-    $('#articleTable').DataTable({
+    $('#articlesTable').DataTable({
+        "order": [[4, "asc"]],
         language: {
             "sDecimal": ",",
             "sEmptyTable": "Tabloda herhangi bir veri mevcut değil",
@@ -30,8 +31,7 @@
                     "1": "1 kayıt seçildi"
                 }
             }
-        }
-        "order": [[4,"desc"]]
+        },
+
     });
-  /*  sayfa tam olarak yüklendiği anda jquery kodlarının yüklenmesini sağlar.*/
 });

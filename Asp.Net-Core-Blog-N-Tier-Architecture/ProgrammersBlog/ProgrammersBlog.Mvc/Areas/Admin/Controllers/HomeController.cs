@@ -39,7 +39,7 @@ namespace ProgrammersBlog.Mvc.Areas.Admin.Controllers
 
             var articlesCountResult = await _articleService.CountByIsDeleted();
 
-            var commentCountResult = await _commentService.CountByIsDeleted();
+            var commentCountResult = await _commentService.CountByNonDeletedAsync();
             var userCount = await _userManager.Users.CountAsync();
 
             var articleResult = await _articleService.GetAll();

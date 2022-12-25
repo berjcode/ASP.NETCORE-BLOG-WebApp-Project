@@ -1,0 +1,156 @@
+﻿@model ProgrammersBlog.Mvc.Areas.Admin.Models.ArticleUpdateViewModel
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Makale Düzenle";
+
+}
+
+@*Resim Datası Göndermek için  enctype="multipart/form-data"*@
+<form asp-controller="Article" asp-action="Update" enctype="multipart/form-data">
+
+    <div class="row mt-2">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                     <input type="hidden"  asp-for="UserId" />
+                    <input type="hidden"  asp-for="Id" />
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="articleTitle" placeholder="Makale Başlığı" asp-for="Title" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="text-editor" asp-for="Content">
+
+
+                           </textarea>
+                        <span asp-validation-for="Content" class="text-danger"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="card">
+
+
+                <div class="card-header">
+
+                    Temel Ayarlar
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="categoryList" asp-for="CategoryId"></label>
+                        <select id="categoryList" class="form-control" asp-for="CategoryId" asp-items="@(new SelectList(Model.Categories,"Id","Name"))">
+                            <option></option>
+                        </select>
+                        <span asp-validation-for="CategoryId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="datepicker" asp-for="Date"> </label>
+                        <input class="form-control" type="text" id="datepicker" value="@DateTime.Now.ToShortDateString()" asp-for="Date" />
+                        <span asp-validation-for="Date" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="thumbnail" asp-for="Thumbnail">  </label>
+                        <input type="hidden" id="thumbnail" accept="image/*" class="form-control-file" asp-for="Thumbnail" />
+                        <img class="my-image" src="~/img/@Model.Thumbnail" alt="@Model.Title" />
+                        <span asp-validation-for="Thumbnail" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="thumbnailUpload" asp-for="ThumbnailFile">  </label>
+                        <input type="file" id="thumbnailUpload" accept="image/*" class="form-control-file" asp-for="ThumbnailFile" />
+                        <span asp-validation-for="ThumbnailFile" class="text-danger"></span>
+                    </div>
+                    <hr />
+                    <div class="form-group">
+
+                        <input type="checkbox" id="isActive" class="form-check-input" asp-for="IsActive" />
+                        <label for="isActive" class="form-check-label" asp-for="IsActive"> </label>
+                        <span asp-validation-for="IsActive" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block " type="submit">Kaydet</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col-md-12 mt-2">
+            <div class="card">
+
+                <div class="card-header">
+
+                    Seo
+                </div>
+
+                <div class="card-body">
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="seoWriter" asp-for="SeoAuthor"> Yazar Adı </label>
+                            <input class="form-control" type="text" id="seoWriter" asp-for="SeoAuthor" />
+                            <span asp-validation-for="SeoAuthor" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="seoTags" asp-for="SeoTags"> Etiketler </label>
+                            <input class="form-control" type="text" id="seoTags" asp-for="SeoTags" />
+                            <span asp-validation-for="SeoTags" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="seoDescription" asp-for="SeoDescription">  Makale Açıklaması </label>
+                            <textarea class="form-control" id="seoDescription" asp-for="SeoDescription">
+
+                            </textarea>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+@*Kütüphanelerin önce gelmesi için üste koy*@
+@section Scripts
+    {
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.26.0/trumbowyg.min.js" integrity="sha512-ZfWLe+ZoWpbVvORQllwYHfi9jNHUMvXR4QhjL1I6IRPXkab2Rquag6R0Sc1SWUYTj20yPEVqmvCVkxLsDC3CRQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.26.0/langs/tr.min.js" integrity="sha512-SysH9TbVmzlYAKIvJJcHAwQtT5TznKnZSC9/hZqew8gSmmnCW4tTvdIEjQRfc3W7fYhrKRnpegQpxzD+ti6Yng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.26.0/plugins/colors/trumbowyg.colors.min.js" integrity="sha512-+TKrf2rSCeo+OOYzHDqo4udkV1lrdcngiq63v7Npr91KiR5SmIPI1QFOkdekdgZJJvV0JrMKHwP3ji4yOroYKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.26.0/plugins/emoji/trumbowyg.emoji.min.js" integrity="sha512-bGSayar7zxHjUBa0L4IaPx+192WNfAtb+2m1VMRc8nmRI+hehlikzby+MNTcgh+FbA0fLMa0GmM0IxEustPG+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="~/js/articleAdd.js" type="application/ecmascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@@4.1.0-rc.0/dist/js/select2.min.js"></script> @*@ ekle ki razor sanmasın*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}
+@section Styles
+    {
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.26.0/ui/trumbowyg.min.css" integrity="sha512-Zi7Hb6P4D2nWzFhzFeyk4hzWxBu/dttyPIw/ZqvtIkxpe/oCAYXs7+tjVhIDASEJiU3lwSkAZ9szA3ss3W0Vug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.26.0/plugins/colors/ui/trumbowyg.colors.min.css" integrity="sha512-+WAAd5VI8qVDEeMCLYEo/zVr2Mtf155tau4PKxAczIXaUThk1FY8ckPwl8YMcC4PEt+NZ+oeEVkiW1HEBZ5L4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.26.0/plugins/emoji/ui/trumbowyg.emoji.min.css" integrity="sha512-YPjRgl/pLEBNRvXM9qDPWodrkj0jnpNZGoY1hfijTqUmJT+IuKsTkEPjdSIBG4Bklk2O06k/K+BoHdiIVd/GOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/blitzer/jquery-ui.min.css" integrity="sha512-ibBo2Ns078qm7xZNTPbIrg5XP4pZ+Aujfmz0QFsce2f4LYpCnF1Esy6FkIRFBgXC9cY30XiS7Ui9+RpN8K7ICg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/blitzer/theme.min.css" integrity="sha512-hZOcPNReWEUnOew9FRdj5KbItrLTrNix1oDe/h18Om/n+dmeszDZ8fV0jWCsFDOiZagIrrg0OORYYZSAv4Iu0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="~/css/select2-bootstrap4.min.css" rel="stylesheet" />
+}
