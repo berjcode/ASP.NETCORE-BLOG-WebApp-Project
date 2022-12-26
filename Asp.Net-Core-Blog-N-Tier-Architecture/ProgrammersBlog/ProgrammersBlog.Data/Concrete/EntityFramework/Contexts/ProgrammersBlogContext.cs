@@ -18,7 +18,7 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Contexts
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-				"server=(localdb)\\ProjectModels;database=BlogAppSoftware2;integrated security =true;");
+				"server=(localdb)\\ProjectModels;database=SoftwareEp;integrated security =true;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -35,6 +35,10 @@ namespace ProgrammersBlog.Services.Utilities
                 return "Böyle bir yorum bulunamadı.";
             }
 
+            public static string Approve(int commentId)
+            {
+                return $" {commentId}, yorumunuz başarıyla Onaylanmıştır.";
+            }
             public static string Add(string createdByName)
             {
                 return $"Sayın {createdByName}, yorumunuz başarıyla eklenmiştir.";

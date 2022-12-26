@@ -205,5 +205,28 @@ namespace ProgrammersBlog.Services.Concrete
                 return new DataResult<int>(ResultStatus.Error, $"Beklenmeyen bir hata ile karşılaşıldı.", -1);
             }
         }
+
+        public async Task<IDataResult<CommentDto>> ApproveAsync(int commentId,string modifiedByName)
+        {
+            var comment = await _unitOfWork.Comments.GetAsync(c => c.Id == commentId, c => c.Article);//Include işlemş
+            if(comment != null)
+            {
+                comment.IsActive = true;
+                comment.ModifiedByName = modifiedByName;
+                comment.ModifiedDate = DateTime.Now;
+
+                var updatedComment =  await _unitOfWork.Comments.UpdateAsync(comment);
+
+                await _unitOfWork.SaveAsync();
+
+                return new DataResult<CommentDto>(ResultStatus.Success, Messages.Comment.Approve(commentId), new CommentDto
+                {
+                    Comment = updatedComment,
+                });
+            }
+
+            return new DataResult<CommentDto>(ResultStatus.Error,Messages.Comment.NotFound(isPlural:false),null);
+
+        }
     }
 }

@@ -32,8 +32,8 @@ namespace ProgrammersBlog.Mvc
             //Identity Cookie konfigürasyon ayarlarý
 			services.ConfigureApplicationCookie(options =>
             {
-                options.LoginPath = new PathString("/Admin/User/Login"); //Login sayfasý yolu
-                options.LogoutPath = new PathString("/Admin/User/Logout"); //Logout sayfasý yolu
+                options.LoginPath = new PathString("/Admin/Auth/Login"); //Login sayfasý yolu
+                options.LogoutPath = new PathString("/Admin/Auth/Logout"); //Logout sayfasý yolu
                 options.Cookie = new CookieBuilder
                 {
                     Name = "ProgrammersBlog",  //Cookie Ýsmi
@@ -43,7 +43,7 @@ namespace ProgrammersBlog.Mvc
                 };
                 options.SlidingExpiration = true; //kullanýcý sisteme giriþ süresi tanýnmasý
                 options.ExpireTimeSpan = System.TimeSpan.FromDays(7);  //cookie yaþam süresi 7 gün.
-                options.AccessDeniedPath = new PathString("/Admin/User/AccessDenied"); //yetkisiz giriþ sayfasý yolu 
+                options.AccessDeniedPath = new PathString("/Admin/Auth/AccessDenied"); //yetkisiz giriþ sayfasý yolu 
             });
         }
 

@@ -69,6 +69,103 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
                     ModifiedByName = "InitialCreate",
                     ModifiedDate = DateTime.Now,
                     Note = "JavaScript Blog Kategorisi",
+                },
+                new Category
+                {
+                    Id = 4,
+                    Name = "Typescript",
+                    Description = "Typescript Programlama Dili ile İlgili En Güncel Bilgiler",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "Typescript Blog Kategorisi",
+                }
+                ,
+                new Category
+                {
+                    Id = 5,
+                    Name = "Java",
+                    Description = "Java Programlama Dili ile İlgili En Güncel Bilgiler",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "Java Blog Kategorisi",
+                }
+                ,
+                new Category
+                {
+                    Id = 6,
+                    Name = "Python",
+                    Description = "Python Programlama Dili ile İlgili En Güncel Bilgiler",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "Python Blog Kategorisi",
+                }
+                ,
+                new Category
+                {
+                    Id = 7,
+                    Name = "Php",
+                    Description = "Php Programlama Dili ile İlgili En Güncel Bilgiler",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "Php Blog Kategorisi",
+                }
+                ,
+                new Category
+                {
+                    Id = 8,
+                    Name = "Kotlin",
+                    Description = "Kotlin Programlama Dili ile İlgili En Güncel Bilgiler",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "Kotlin Blog Kategorisi",
+                }
+                ,
+                new Category
+                {
+                    Id = 9,
+                    Name = "Swift",
+                    Description = "Swift Programlama Dili ile İlgili En Güncel Bilgiler",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "Swift Blog Kategorisi",
+                }
+                ,
+                new Category
+                {
+                    Id = 10,
+                    Name = "Ruby",
+                    Description = "Ruby Programlama Dili ile İlgili En Güncel Bilgiler",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "Ruby Blog Kategorisi",
                 }
             );
         }
