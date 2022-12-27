@@ -19,7 +19,10 @@ namespace ProgrammersBlog.Mvc
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews().AddRazorRuntimeCompilation().AddJsonOptions(opt =>
+            services.AddControllersWithViews(options =>
+            {
+                options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(value => "bu alan boþ geçilmemelidir.");
+            }).AddRazorRuntimeCompilation().AddJsonOptions(opt =>
             {
                 opt.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); //json formatýnda gönderiyoruz.
                 opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve; //iç içe olan objelerde bir birine referans ederse bir sorun yaþamayacaktýr. Nested

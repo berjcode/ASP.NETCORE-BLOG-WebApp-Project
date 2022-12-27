@@ -16,12 +16,15 @@ namespace ProgrammersBlog.Services.Abstract
         Task<IDataResult<CategoryListDto>> GetAll();
         Task<IDataResult<CategoryListDto>> GetAllByNonDeleted();
         Task<IDataResult<CategoryListDto>> GetAllByNonDeletedAndActive();
+
+        Task<IDataResult<CategoryListDto>> GetAllByDeletedAsync();
         Task<IDataResult<CategoryDto>> Add(CategoryAddDto categoryAddDto,string createdByName);
         Task<IDataResult<CategoryDto>> Update(CategoryUpdateDto categoryUpdateDto, string modifiedByName);
         
         
         // Dataresult ile dönmemizin sebebi daha fazla detayla dönmemiz. örnek alert mesajları içinde
         Task<IDataResult<CategoryDto>> Delete(int categoryId, string modifiedByName);
+        Task<IDataResult<CategoryDto>> UndoDeleteAsync(int categoryId, string modifiedByName);
         Task<IResult> HardDelete(int categoryId);
 
 

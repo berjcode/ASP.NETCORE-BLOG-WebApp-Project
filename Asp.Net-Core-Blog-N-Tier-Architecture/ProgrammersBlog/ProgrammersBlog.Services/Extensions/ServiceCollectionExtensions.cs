@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using ProgrammersBlog.Data.Abstract;
 using ProgrammersBlog.Data.Concrete;
@@ -30,7 +31,10 @@ namespace ProgrammersBlog.Services.Extensions
                 // User Username and Email Options
                 options.User.AllowedUserNameCharacters= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+$"; //bu karakterler olabilir.
                 options.User.RequireUniqueEmail = true; //email uniq olmalı başka birinde olmamalı
-            }).AddEntityFrameworkStores<ProgrammersBlogContext>();
+            }).AddEntityFrameworkStores<ProgrammersBlogContext>(); 
+            serviceCollection.Configure<SecurityStampValidatorOptions>(options =>{
+                options.ValidationInterval = TimeSpan.FromMinutes(30);// TimeSpan.Zero 0 zamanda  yani  döngüde sistem kontrol ediliyor. Role gibi atamalarda  logout yapar. TimeSpan.FromMinutes(30) 30dk
+            });
             serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
             serviceCollection.AddScoped<ICategoryService, CategoryManager>();
             serviceCollection.AddScoped<IArticleService, ArticleManager>();

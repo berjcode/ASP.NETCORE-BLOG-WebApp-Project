@@ -24,7 +24,14 @@ namespace ProgrammersBlog.Services.Utilities
 			{
 				return $"{categoryName} adlı kategori başarıyla eklenmiştir.";
 			}
-		}
+
+            public static string UndoDelete(string categoryName)
+            {
+                return $"{categoryName} adlı kategori başarıyla arşivden geri getirilmiştir. ";
+            }
+
+
+        }
 
 
         public static class Comment
@@ -55,6 +62,11 @@ namespace ProgrammersBlog.Services.Utilities
             public static string HardDelete(string createdByName)
             {
                 return $"{createdByName} tarafından eklenen yorum başarıyla veritabanından silinmiştir.";
+            }
+
+            public static string UndoDelete(string createdByName)
+            {
+                return $"{createdByName} adlı yorum geri getirilmiştir.";
             }
         }
     }

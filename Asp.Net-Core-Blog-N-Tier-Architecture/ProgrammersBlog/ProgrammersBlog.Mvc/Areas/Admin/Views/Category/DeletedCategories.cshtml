@@ -1,0 +1,83 @@
+﻿
+@model ProgrammersBlog.Entities.Dtos.CategoryListDto
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Silinmiş Kategoriler";
+}
+
+    <div id="modalPlaceHolder" aria-hidden="true"></div>
+    <div class="card mb-4 mt-2">
+                            <div class="card-header">
+                                <i class="fas fa-table mr-1"></i>
+                           Silinmiş Kategoriler     Kategoriler
+                            </div>
+        <div class="card-body">
+            <div class="spinner-border" role="status" style="display: none;">
+                <span class="sr-only">Yükleniyor...</span>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered" id="categoriesTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Adı</th>
+                        <th>Açıklaması</th>
+                        <th>Aktif Mi?</th>
+                        <th>Silinmiş Mi?</th>
+                        <th>Not</th>
+                        <th>Oluşturulma Tarihi</th>
+                        <th>Oluşturan Kullanıcı Adı</th>
+                        <th>Son Düzenlenme Tarihi</th>
+                        <th>Son Düzenleyen Kullanıcı Adı</th>
+                        <th>İşlemler</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Adı</th>
+                        <th>Açıklaması</th>
+                        <th>Aktif Mi?</th>
+                        <th>Silinmiş Mi?</th>
+                        <th>Not</th>
+                        <th>Oluşturulma Tarihi</th>
+                        <th>Oluşturan Kullanıcı Adı</th>
+                        <th>Son Düzenlenme Tarihi</th>
+                        <th>Son Düzenleyen Kullanıcı Adı</th>
+                        <th>İşlemler</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    @foreach (var category in Model.Categories)
+                    {
+                        <tr name="@category.Id">
+                            <td>@category.Id</td>
+                            <td>@category.Name</td>
+                            <td>@category.Description</td>
+                            <td>@category.IsActive</td>
+                            <td>@category.IsDeleted</td>
+                            <td>@category.Note</td>
+                            <td>@category.CreatedDate.ToShortDateString()</td>
+                            <td>@category.CreatedByName</td>
+                            <td>@category.ModifiedDate.ToShortDateString()</td>
+                            <td>@category.ModifiedByName</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm btn-undo" data-id="@category.Id"><span class="fas fa-undo"></span></button>
+                                <button class="btn btn-danger btn-sm btn-delete" data-id="@category.Id"><span class="fas fa-minus-circle"></span></button>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+     </div>
+
+@section Scripts
+{
+    <script src="~/js/deletedCategories.js" type="application/ecmascript"></script>
+}
+@section Styles
+{
+ 
+}

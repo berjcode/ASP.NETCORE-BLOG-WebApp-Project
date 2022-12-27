@@ -887,3 +887,6 @@ C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBl
 C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\Auth\Login.cshtml.g.cs
 C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\Role\Index.cshtml.g.cs
 C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\Role\_RoleAssignPartial.cshtml.g.cs
+C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\Article\DeletedArticles.cshtml.g.cs
+C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\DeletedCategories.cshtml.g.cs
+C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\Comment\DeletedComments.cshtml.g.cs

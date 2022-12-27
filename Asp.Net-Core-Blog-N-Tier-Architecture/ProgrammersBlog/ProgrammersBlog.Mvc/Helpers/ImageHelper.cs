@@ -10,6 +10,7 @@ using ProgrammersBlog.Shared.Utilities.Extensions;
 using ProgrammersBlog.Shared.Utilities.Results.Concrete;
 using ProgrammersBlog.Shared.Utilities.Results.ComplexTypes;
 using ProgrammersBlog.Entities.ComplexType;
+using System.Text.RegularExpressions;
 
 namespace ProgrammersBlog.Mvc.Helpers
 {
@@ -57,8 +58,17 @@ namespace ProgrammersBlog.Mvc.Helpers
 			}
 			string oldFileName = Path.GetFileNameWithoutExtension(pictureFile.FileName);
 			string fileExtension = Path.GetExtension(pictureFile.FileName);
+
+			//regex kullanıyoruz.
+
+			Regex regex = new Regex("[*'\",._&#^@?]");
+			Name = regex.Replace(Name,string.Empty);
+
+
+ 
+
 			DateTime dateTime = DateTime.Now;
-			// AlperTunga_587_5_38_12_3_10_2020.png
+			// abdullah_587_5_38_12_3_10_2020.png
 			string newFileName = $"{Name}_{dateTime.FullDateAndTimeStringWithUnderscore()}{fileExtension}";
 			var path = Path.Combine($"{_wwwroot}/{imgFolder}/{folderName}", newFileName);
 			await using (var stream = new FileStream(path, FileMode.Create))

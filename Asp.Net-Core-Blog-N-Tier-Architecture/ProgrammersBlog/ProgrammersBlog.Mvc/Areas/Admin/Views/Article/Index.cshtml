@@ -97,6 +97,13 @@
 @section Scripts
 {
     <script src="~/js/articleIndex.js" type="application/ecmascript"> </script>
+    <script>
+        $(document).ready(function(){
+            $('#btnAdd').click(function() {
+                window.location.href ='@Url.Action("Add","Article")';
+            });
+        })
+    </script>
 }
 
 

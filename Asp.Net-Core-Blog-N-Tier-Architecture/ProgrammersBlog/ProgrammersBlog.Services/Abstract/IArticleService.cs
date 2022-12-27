@@ -16,12 +16,13 @@ namespace ProgrammersBlog.Services.Abstract
         Task<IDataResult<ArticleListDto>> GetAll();
         Task<IDataResult<ArticleListDto>> GetAllByNonDeleted();
         Task<IDataResult<ArticleListDto>> GetAllByNonDeletedAndActive();
+        Task<IDataResult<ArticleListDto>> GetAllByDeletedAsync();
         Task<IDataResult<ArticleListDto>> GetAllByCategory(int categoryId);
         Task<IResult> Add(ArticleAddDto articleAddDto, string createdByName,int userId);
         Task<IResult> Update(ArticleUpdateDto articleUpdateDto, string modifiedByName);
         Task<IResult> Delete(int articleId, string modifiedByName);
         Task<IResult> HardDelete(int articleId);
-
+        Task<IResult> UndoDeleteAsync(int articleId, string modifiedByName);
         Task<IDataResult<int>> Count();
         Task<IDataResult<int>> CountByIsDeleted();
     }

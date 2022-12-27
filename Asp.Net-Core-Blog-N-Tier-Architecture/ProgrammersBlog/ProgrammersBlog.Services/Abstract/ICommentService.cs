@@ -20,6 +20,7 @@ namespace ProgrammersBlog.Services.Abstract
         Task<IDataResult<CommentDto>> AddAsync(CommentAddDto commentAddDto);
         Task<IDataResult<CommentDto>> UpdateAsync(CommentUpdateDto commentUpdateDto, string modifiedByName);
         Task<IDataResult<CommentDto>> DeleteAsync(int commentId, string modifiedByName);
+        Task<IDataResult<CommentDto>> UndoDeleteAsync(int commentId, string modifiedByName);
         Task<IResult> HardDeleteAsync(int commentId);
         Task<IDataResult<int>> CountAsync();
         Task<IDataResult<int>> CountByNonDeletedAsync();

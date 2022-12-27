@@ -131,6 +131,7 @@ namespace ProgrammersBlog.Services.Concrete
             {
                 var article = await UnitOfWork.Articles.GetAsync(a => a.Id == articleId);
                 article.IsDeleted = true;
+                article.IsActive = false;
                 article.ModifiedByName = modifiedByName;
                 article.ModifiedDate=DateTime.Now;
                 await UnitOfWork.Articles.UpdateAsync(article);
@@ -194,6 +195,39 @@ namespace ProgrammersBlog.Services.Concrete
             {
                 return new DataResult<ArticleUpdateDto>(ResultStatus.Error, Messages.Category.NotFound(isPlural: false), null);
             }
+        }
+
+        public async Task<IDataResult<ArticleListDto>> GetAllByDeletedAsync()
+        {
+            var articles = await UnitOfWork.Articles.GetAllAsync(a => a.IsDeleted, ar => ar.User,
+                    ar => ar.Category);
+
+            if (articles.Count > -1)    
+            {
+                return new DataResult<ArticleListDto>(ResultStatus.Success, new ArticleListDto
+                {
+                    Articles = articles,
+                    ResultStatus = ResultStatus.Success
+                });
+            }
+            return new DataResult<ArticleListDto>(ResultStatus.Error, "Makaleler bulunamadı.", null);
+        }
+
+        public async Task<IResult> UndoDeleteAsync(int articleId, string modifiedByName)
+        {
+            var result = await UnitOfWork.Articles.AnyAsync(a => a.Id == articleId);
+            if (result)
+            {
+                var article = await UnitOfWork.Articles.GetAsync(a => a.Id == articleId);
+                article.IsDeleted = false;
+                article.IsActive = true;
+                article.ModifiedByName = modifiedByName;
+                article.ModifiedDate = DateTime.Now;
+                await UnitOfWork.Articles.UpdateAsync(article);
+                await UnitOfWork.SaveAsync();
+                return new Result(ResultStatus.Success, $"{article.Title} başlıklı makale başarıyla geri getirilmiştir.");
+            }
+            return new Result(ResultStatus.Error, "Böyle bir makale bulunamadı.");
         }
     }
 }

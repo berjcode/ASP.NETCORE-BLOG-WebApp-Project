@@ -38,6 +38,21 @@
                         Kullanıcılar
                     </a>
                 }
+                <div class="sb-sidenav-menu-heading">Diğer</div>
+               @if (Model.Roles.Any(r => r.Equals("SuperAdmin") || r.Equals("User.Read")))
+                {
+
+                  
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" asp-area="Admin" asp-controller="Category" asp-action="DeletedCategories">Kategori Arşiv</a>
+                        <a class="nav-link" asp-area="Admin" asp-controller="Article" asp-action="DeletedArticles">Makaleler Arşiv </a>
+                        <a class="nav-link" asp-area="Admin" asp-controller="Comment" asp-action="DeletedComments">Yorumlar Arşiv</a>
+                            </nav>
+                       
+
+                   
+                
+              }
                 
             </div>
         </div>
