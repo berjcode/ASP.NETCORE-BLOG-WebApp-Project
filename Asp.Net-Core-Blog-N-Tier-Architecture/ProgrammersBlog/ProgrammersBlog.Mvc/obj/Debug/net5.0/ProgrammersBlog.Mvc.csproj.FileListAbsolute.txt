@@ -828,7 +828,6 @@ C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBl
 C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\ProgrammersBlog.Mvc.pdb
 C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\ProgrammersBlog.Mvc.genruntimeconfig.cache
 C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\ref\ProgrammersBlog.Mvc.dll
-C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\Razor\Views\Shared\ComingSoonLayout.cshtml.g.cs
 C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
 C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\bin\Debug\net5.0\Microsoft.CodeAnalysis.Workspaces.dll
@@ -890,3 +889,8 @@ C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBl
 C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\Article\DeletedArticles.cshtml.g.cs
 C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\DeletedCategories.cshtml.g.cs
 C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\Razor\Areas\Admin\Views\Comment\DeletedComments.cshtml.g.cs
+C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\Razor\Views\Home\BlogIndex.cshtml.g.cs
+C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\Razor\Views\Shared\_BlogLayout.cshtml.g.cs
+C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\Razor\Views\Shared\Components\RightSideBar\Default.cshtml.g.cs
+C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\Razor\Views\Shared\_ArticleLayout.cshtml.g.cs
+C:\Users\abdbl\Desktop\projeAdi\ProgrammersBlog-Proje-Dosyasi-D103\ProgrammersBlog\ProgrammersBlog.Mvc\obj\Debug\net5.0\Razor\Views\Article\detail.cshtml.g.cs

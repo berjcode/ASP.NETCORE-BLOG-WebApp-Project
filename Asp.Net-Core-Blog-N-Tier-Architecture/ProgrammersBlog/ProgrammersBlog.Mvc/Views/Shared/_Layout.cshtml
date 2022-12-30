@@ -1,13 +1,88 @@
 ﻿<!DOCTYPE html>
-
-<html>
+<html lang="tr">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="İnsanları öz ve doğru bilgiye ulaştıran bir kuruluş">
+    <meta name="author" content="Devcrud">
+    <title>Bilişim Sözlüğü</title>
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="~/BlogThema/assets/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- Bootstrap + Creative Studio main styles -->
+    <link rel="stylesheet" href="~/BlogThema/assets/css/creative-studio.css">
+
 </head>
-<body>
-    <div>
-        @RenderBody()
-    </div>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-lg navbar-dark" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="~/BlogThema/assets/imgs/ataunilogo.png" alt="atauni">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Anasayfa</a>
+                    </li>
+                   
+
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home"  asp-action="BlogIndex" >Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">İletişim</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Page Navigation -->
+    <!-- Page Header -->
+    <header class="header">
+        <div class="overlay">
+            <h6 class="subtitle">Doğru ve Öz Bilgi</h6>
+            <h1 class="title">Bilişim Sözlüğü</h1>
+            <div class="buttons text-center">
+                <a href="#service" class="btn btn-primary rounded w-lg btn-lg my-1">Daha fazla</a>
+
+            </div>
+        </div>
+    </header>
+
+
+
+    @RenderBody()
+
+    <!-- Blog Section -->
+    <!-- End of Blog Section -->
+
+
+
+
+
+    <script src="~/BlogThema/assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="~/BlogThema/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="~/BlogThema/assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Creative Studio js -->
+    <script src="~/BlogThema/assets/js/creative-studio.js"></script>
+
 </body>
 </html>
