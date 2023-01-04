@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
-
+                
 
                     @foreach(var article in Model.Articles)
                     {
@@ -45,7 +45,7 @@
                                     <li><a href="#"><i class="fa fa-user"></i> @article.User.UserName tarafından @article.Date tarihinde oluşturulmuştur. </a> </li>
                                     <li><a href="#"><i class="fa fa-user"></i> @article.Category.Name</a></li>
                                    
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> @article.CommentCount</a></li>
                                 </ul>
                             </div>
                         </article>
@@ -76,7 +76,7 @@
                     {
                         <li class="page-item">
 
-                            <a class="page-link" asp-route-currentPage="@(Model.CurrentPage -1 )" asp-route-categoryId="@Model.CategoryId.Value"> Önceki </a>
+                            <a class="page-link" asp-route-currentPage="@(Model.CurrentPage -1 )"  asp-route-isAscending ="@Model.IsAscending"  asp-route-pageSize="@Model.PageSize"     asp-route-categoryId="@Model.CategoryId.Value"> Önceki </a>
 
                         </li>
                     }
@@ -85,7 +85,7 @@
                     {
                         <li class="page-item">
 
-                            <a class="page-link" asp-route-currentPage="@(Model.CurrentPage -1 )"> Önceki</a>
+                            <a class="page-link" asp-route-isAscending ="@Model.IsAscending"  asp-route-pageSize="@Model.PageSize"  asp-route-currentPage="@(Model.CurrentPage -1 )"> Önceki</a>
 
                         </li>
                     }
@@ -100,13 +100,13 @@
                         @if (Model.CategoryId != null)
                         {
 
-                            <a class="page-link" asp-route-currentPage="@i" asp-route-categoryId="@Model.CategoryId.Value"> @i</a>
+                            <a class="page-link" asp-route-isAscending ="@Model.IsAscending"  asp-route-pageSize="@Model.PageSize"   asp-route-currentPage="@i" asp-route-categoryId="@Model.CategoryId.Value"> @i</a>
 
                         }
                         else
                         {
 
-                            <a class="page-link" asp-route-currentPage="@i"> @i</a>
+                            <a class="page-link" asp-route-isAscending ="@Model.IsAscending"  asp-route-pageSize="@Model.PageSize"   asp-route-currentPage="@i"> @i</a>
 
                         }
                     </li>
@@ -117,7 +117,7 @@
                     {
                         <li class="page-item">
 
-                            <a class="page-link" asp-route-currentPage="@(Model.CurrentPage +1 )" asp-route-categoryId="@Model.CategoryId.Value"> Sonraki </a>
+                            <a class="page-link" asp-route-isAscending="@Model.IsAscending" asp-route-pageSize="@Model.PageSize" asp-route-currentPage="@(Model.CurrentPage +1 )" asp-route-categoryId="@Model.CategoryId.Value"> Sonraki </a>
 
                         </li>
                     }
@@ -126,7 +126,7 @@
                     {
                         <li class="page-item">
 
-                            <a class="page-link" asp-route-currentPage="@(Model.CurrentPage +1 )"> Sonraki</a>
+                            <a class="page-link" asp-route-isAscending="@Model.IsAscending" asp-route-pageSize="@Model.PageSize" asp-route-currentPage="@(Model.CurrentPage +1 )"> Sonraki</a>
 
                         </li>
                     }

@@ -32,7 +32,7 @@
                             @Html.Raw(Model.Article.Content)
                      </p>
                   <hr />
-                        <p class="text-center"> Okunma Sayısı :<span class="badge badge-info">@Model.Article.ViewCount </span>  Yorum Sayısı :<span class="badge badge-info">@Model.Article.CommentCount </span></p>
+                        <p class="text-center"> Okunma Sayısı :<span class="badge badge-info">@Model.Article.ViewCount </span>  Yorum Sayısı :<span class="badge badge-info"> @Model.Article.CommentCount </span></p>
                </div>
                <div class="navigation-top">
                   <div class="d-sm-flex justify-content-between text-center">
@@ -123,15 +123,17 @@
                      </div>
                   </form>
                </div>
-          
+                    
                    
               
             </div>
                 
-                @await Component.InvokeAsync("RightSideBar")
+             
                 </div>
             </div>
+           
         </div>
+       
       </div>
    </section>
    <!--================ Blog Area end =================-->

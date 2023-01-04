@@ -13,18 +13,20 @@ namespace ProgrammersBlog.Shared.Entities.Abstract
         public virtual string Message { get; set; }
 
 
-        public int CurrentPage { get; set; } = 1; //şuanki sayfa
+        public virtual int CurrentPage { get; set; } = 1; //şuanki sayfa
 
-        public int PageSize { get; set; } = 5;   //bir sayfada kac tane değer yani blog 
+        public virtual int PageSize { get; set; } = 5;   //bir sayfada kac tane değer yani blog 
 
-        public int TotalCount { get; set; }   //toplamda kac makale var
-
-
-        public int TotalPages => (int)Math.Ceiling(decimal.Divide(TotalCount, PageSize));
+        public virtual int TotalCount { get; set; }   //toplamda kac makale var
 
 
-        public bool ShowPrevious => CurrentPage > 1;
+        public virtual int TotalPages => (int)Math.Ceiling(decimal.Divide(TotalCount, PageSize));
 
-        public bool ShowNext => CurrentPage < TotalPages;
+
+        public virtual bool ShowPrevious => CurrentPage > 1;
+
+        public virtual bool ShowNext => CurrentPage < TotalPages;
+
+        public virtual bool IsAscending { get; set; } = false;
     }
 }
