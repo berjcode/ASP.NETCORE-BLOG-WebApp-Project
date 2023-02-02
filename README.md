@@ -1,6 +1,6 @@
 # Software Engineering Project -ASP.NET CORE BLOG N-Tier
  
-#  Software Engineering Project
+
 # Project
 * A manageable blog application where members share posts.
 
@@ -27,12 +27,12 @@
 ## LIBRARIES 
  * JQUERY
  * Datatables
-  * toastr
-   * trumbowyg
-    * Asp.net Core Identity
-    * Select2
-    * jquery UI
- * * jquery UI
+ * toastr
+ * trumbowyg
+ * Asp.net Core Identity
+ * Select2
+ * jquery UI
+
  ### Design Patterns:
       * Generic Repository                                                                                                                                      
       * MVC                                                                                                                                     
