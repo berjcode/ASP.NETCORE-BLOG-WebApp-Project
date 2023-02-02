@@ -12,6 +12,10 @@
 * Asp.Net Core 5
 * EntityFramework Core 5.x
 * MSSQL
+* HTML
+* Bootstrap
+* Js
+* CSS
 
 
 ## Packages
